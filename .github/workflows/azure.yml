@@ -19,3 +19,10 @@ jobs:
         uses: Azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS_TEST}}
+          
+      #- name: Deploy application to Azure storage
+      #  uses: Azure/cli@v1
+      #  with:
+      #    azcliversion: latest
+      #    inlineScript: |
+      #      az storage blob upload-batch -s $GITHUB_WORKSPACE/dist -d \$web --account-name ${{ env.STORAGE_ACCOUNT }}
